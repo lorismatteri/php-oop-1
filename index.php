@@ -25,6 +25,14 @@
             $this->color = $color;
             $this->prezzo = $prezzo;
         }
+
+        public function getModel(){
+            return $this->model;
+        }
+
+        public function setPrezzo(float $prezzo){
+            $this->prezzo = $prezzo;
+        }
     }
 
     $honda = new Moto('Honda', 'CB1000R', 998, 145, 'black', 13390.00);
@@ -35,4 +43,12 @@
 
 
     var_dump($honda, $yamaha, $kawasaki, $suzuki, $mv);
+
+    $modello = $mv->getModel();
+
+    var_dump($modello);
+
+    $suzuki->setPrezzo(8690.00);
+
+    var_dump($suzuki);
 ?>
